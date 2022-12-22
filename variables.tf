@@ -29,12 +29,12 @@ variable "sku_name" {
 }
 variable "enable_non_ssl_port" {
   description = "Enable the non-SSL port (6379) - disabled by default."
-  type = boolean
+  type = bool
 
 }
 variable "public_network_access_enabled" {
     description = "Whether or not public network access is allowed for this Redis Cache."
-    type= boolean 
+    type= bool
 }
 
 variable "redis_version" {
