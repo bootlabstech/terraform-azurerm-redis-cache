@@ -30,16 +30,19 @@ variable "sku_name" {
 variable "enable_non_ssl_port" {
   description = "Enable the non-SSL port (6379) - disabled by default."
   type = bool
+  default = false
 
 }
 variable "public_network_access_enabled" {
     description = "Whether or not public network access is allowed for this Redis Cache."
     type= bool
+    default = true
 }
 
 variable "redis_version" {
   description = "Redis version."
   type        = string
+  default = "6"
 
 }
 # variable "zones" {
@@ -49,12 +52,14 @@ variable "redis_version" {
 variable "identity" {
     description = "region of deployment"
     type= string  
-        default = "false"
+    default = "false"
 
 }
 variable "type" {
     description = "Specifies the type of Managed Service Identity that should be configured on this Redis Cluster. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned"
     type= string  
+    default = "SystemAssigned"
+
 }
 variable "patch_schedule" {
     description = "region of deployment"
@@ -64,4 +69,5 @@ variable "patch_schedule" {
 variable "day_of_week" {
     description = " the Weekday name - possible values include"
     type= string  
+    default = "Monday"
 }
