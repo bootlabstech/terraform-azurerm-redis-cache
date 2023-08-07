@@ -9,9 +9,15 @@ resource "azurerm_redis_cache" "azurerm_redis_cache" {
   public_network_access_enabled = false
   redis_version = var.redis_version
   # zones  = var.zones
+  lifecycle {
+    ignore_changes = [
+      tags,
+    ]
+  }
 
   redis_configuration {
   }
+
 
   dynamic "identity" {
     for_each = var.identity ? [{}] : []
