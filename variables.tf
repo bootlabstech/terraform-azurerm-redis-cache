@@ -23,11 +23,7 @@ variable "sku_name" {
   description = "The SKU of Redis to use. Possible values are Basic, Standard and Premium."
   type        = string
 }
-variable "enable_non_ssl_port" {
-  description = "Enable the non-SSL port (6379) - disabled by default."
-  type        = bool
-  default     = false
-}
+
 variable "minimum_tls_version" {
   description = "The minimum TLS version. Possible values are 1.0, 1.1 and 1.2. Defaults to 1.0."
   type        = string
